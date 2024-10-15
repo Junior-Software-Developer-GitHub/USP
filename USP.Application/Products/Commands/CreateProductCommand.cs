@@ -9,7 +9,7 @@ public record CreateProductCommand(ProductCreateDto Product) : IRequest<ProductD
 
 public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, ProductDetailsDto?>
 {
-    public async Task<ProductDetailsDto?> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+    public async Task<ProductDetailsDto?> Handle(CreateProductCommand request, CancellationToken cancellationToken) 
     {
         var userEntity = new Domain.Entities.User
         {

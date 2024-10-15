@@ -5,7 +5,7 @@ using USP.Application.Common.Mappers;
 
 namespace USP.Application.Products.Commands;
 
-public record CreateProductCommand(ProductCreateDto Product) : IRequest<ProductDetailsDto?>;
+public record CreateProductCommand(ProductCreateDto Product) : IRequest<ProductDetailsDto?>; 
 
 public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, ProductDetailsDto?>
 {

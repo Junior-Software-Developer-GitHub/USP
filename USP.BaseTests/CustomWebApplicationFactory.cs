@@ -12,11 +12,13 @@ public class CustomWebApplicationFactory<TStartup> : WebApplicationFactory<TStar
 {
     public CustomWebApplicationFactory()
     {
+        string conString = Environment.GetEnvironmentVariable("DbString");
+
         Task.Run(async () =>
             {
                 await DB.InitAsync("UspBazaZaTestiranje",
                     MongoClientSettings.FromConnectionString(
-                        "mongodb+srv://pronicmilan:NZltxQMqtMSDtOe0@cluster-usp-milan.d9czt.mongodb.net/"));
+                        conString));
             })
             .GetAwaiter()
             .GetResult();
@@ -30,3 +32,4 @@ public class CustomWebApplicationFactory<TStartup> : WebApplicationFactory<TStar
         });
     }
 }
+

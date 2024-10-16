@@ -15,7 +15,7 @@ public static class DependencyInjection
 
         var db = conn.GetSection("DbName").Value!;
 
-        string conString = Environment.GetEnvironmentVariable("DbString");
+        string conString = "mongodb+srv://lukaantic:1AnWTvqrKe9pqGwu@cluster2022240803.8jtoc.mongodb.net/";
 
         Task.Run(async () => { await DB.InitAsync(db, MongoClientSettings.FromConnectionString(conString)); })
             .GetAwaiter()

@@ -12,7 +12,7 @@ public class CustomWebApplicationFactory<TStartup> : WebApplicationFactory<TStar
 {
     public CustomWebApplicationFactory()
     {
-        string conString = Environment.GetEnvironmentVariable("DbString");
+        string conString = "mongodb+srv://lukaantic:1AnWTvqrKe9pqGwu@cluster2022240803.8jtoc.mongodb.net/";
 
         Task.Run(async () =>
             {

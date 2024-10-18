@@ -5,7 +5,7 @@ using USP.Application.Common.Exceptions;
 
 namespace USP.API.Filters;
 
-public class ApiExceptionFilter : ExceptionFilterAttribute
+public class ApiExceptionFilter : ExceptionFilterAttribute 
 {
     private readonly IDictionary<Type, Action<ExceptionContext>> _exceptionHandlers;
 
